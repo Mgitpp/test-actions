@@ -66,7 +66,7 @@ jobs:
 
             echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u "${{ secrets.GHCR_USER }}" --password-stdin
 
-            docker pull ghcr.io/${{ github.repository_owner }}/vpe04-fastapi:latest
+            docker pull ghcr.io/mgitpp/vpe04-fastapi:latest
 
             docker stop vpe04-fastapi || true
             docker rm vpe04-fastapi || true
@@ -75,6 +75,6 @@ jobs:
               --name vpe04-fastapi \
               --restart unless-stopped \
               -p 8001:8000 \
-              ghcr.io/${{ github.repository_owner }}/vpe04-fastapi:latest
+              ghcr.io/mgitpp/vpe04-fastapi:latestt
 
             docker image prune -f
