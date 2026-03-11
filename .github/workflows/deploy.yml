@@ -75,6 +75,6 @@ jobs:
               --name vpe04-fastapi \
               --restart unless-stopped \
               -p 8001:8000 \
-              ghcr.io/mgitpp/vpe04-fastapi:latestt
+              ghcr.io/mgitpp/vpe04-fastapi:latest
 
             docker image prune -f
